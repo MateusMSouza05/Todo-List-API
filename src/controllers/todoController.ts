@@ -29,4 +29,13 @@ export class TodoController {
             return res.status(500).json({ error: "Erro ao atualizar tarefa" });
         }
     }
+
+    async getTodos(req: Request, res: Response) {
+        try {
+            const todos = await todoService.getTodos();
+            return res.status(200).json(todos);
+        } catch (error) {
+            return res.status(500).json({ error: "Erro ao buscar tarefas" });
+        }
+    }
 }
