@@ -22,4 +22,9 @@ export class TodoService {
             },
         });
     }
+
+
+    async getTodos(): Promise<Todo[]> {
+        return await prisma.task.findMany();
+    }
 }
