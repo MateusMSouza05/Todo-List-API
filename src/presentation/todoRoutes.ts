@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { TodoController } from '../presentation/todoController';
+import { TodoController } from './todoController';
 import { TodoRepository } from '../infrastructure/TodoRepository';
 import { TodoUseCases } from '../application/todoUseCases';
 
